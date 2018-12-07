@@ -1,0 +1,10 @@
+frame1 = imread('0.png');
+frame2 = imread('1.png');
+I1 =double(frame1);
+I2 =double(frame2);
+
+ [x, y] = get_interest_points(I1,16);
+ 
+ features1 = get_features(I1, 428, 337, 16);
+ 
+ [matches, confidences] = match_features(features1, features2);
